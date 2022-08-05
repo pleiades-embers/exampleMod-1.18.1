@@ -5,7 +5,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 
 public enum QuartzToolType {
 
-    CERTUS;
+    CERTUS("certus_quartz", () -> Ingredient.of("forge:gems/certus_quartz"));
 
     private final Tier toolTier;
 
