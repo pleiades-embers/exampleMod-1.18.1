@@ -1,8 +1,4 @@
 
-
-import net.minecraft.world.item.crafting.Ingredient;
-
-
 public class enumTest {
 
     public static void main(String[] string){
@@ -12,5 +8,5 @@ public class enumTest {
 }
 
 enum QuartzToolTypeTest {
-    CERTUS("certus_quartz",()->Ingredient.)
+    CERTUS
 }
