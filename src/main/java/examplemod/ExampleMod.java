@@ -22,8 +22,7 @@ import java.util.stream.Collectors;
 public class ExampleMod
 {
     // Directly reference a slf4j logger
-//    private static final Logger LOGGER = printLogger();
-
+    private static final Logger LOGGER = org.slf4j.LoggerFactory.getLogger(ExampleMod.class);
     public ExampleMod()
     {
   
@@ -44,8 +43,8 @@ public class ExampleMod
     private void setup(final FMLCommonSetupEvent event)
     {   
         // some preinit code
-//        LOGGER.info("HELLO FROM PREINIT");
-//        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+//        Logger.debug("HELLO FROM PREINIT");
+//        Logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -79,7 +78,7 @@ public class ExampleMod
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
             // Register a new block here
-//            LOGGER.info("HELLO from Register Block");
+//            Logger.debug("HELLO from Register Block");
         }
     }
 }
