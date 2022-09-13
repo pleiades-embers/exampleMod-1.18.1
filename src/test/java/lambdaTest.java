@@ -14,7 +14,7 @@ public class lambdaTest {
         Arrays.sort(array, (o1, o2) -> o1.compareTo(o2));
         Arrays.sort(array, String::compareTo);
 
-        System.out.println(String.join(", ", array));
+//        System.out.println(String.join(", ", array));
     }
 }
 
