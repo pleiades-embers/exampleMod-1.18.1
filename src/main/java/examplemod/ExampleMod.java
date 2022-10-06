@@ -14,6 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.stream.Collectors;
 
@@ -22,7 +23,7 @@ import java.util.stream.Collectors;
 public class ExampleMod
 {
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = org.slf4j.LoggerFactory.getLogger(ExampleMod.class);
+    private static final Logger logger = LoggerFactory.getLogger(ExampleMod.class);
     public ExampleMod()
     {
   
@@ -43,22 +44,22 @@ public class ExampleMod
     private void setup(final FMLCommonSetupEvent event)
     {   
         // some preinit code
-//        Logger.debug("HELLO FROM PREINIT");
-//        Logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        logger.debug("HELLO FROM PREINIT");
+        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // Some example code to dispatch IMC to another mod
-//        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        InterModComms.sendTo("examplemod", "helloworld", () -> { logger.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
         // Some example code to receive and process InterModComms from other mods
-//        LOGGER.info("Got IMC {}", event.getIMCStream().
-//                map(m->m.messageSupplier().get()).
-//                collect(Collectors.toList()));
+        logger.info("Got IMC {}", event.getIMCStream().
+                map(m->m.messageSupplier().get()).
+                collect(Collectors.toList()));
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -66,7 +67,7 @@ public class ExampleMod
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
-//        LOGGER.info("HELLO from server starting");
+        logger.info("HELLO from server starting");
     }
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
@@ -78,7 +79,7 @@ public class ExampleMod
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
             // Register a new block here
-//            Logger.debug("HELLO from Register Block");
+            logger.debug("HELLO from Register Block");
         }
     }
 }
