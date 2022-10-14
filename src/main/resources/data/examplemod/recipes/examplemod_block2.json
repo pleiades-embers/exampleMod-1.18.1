@@ -1,0 +1,9 @@
+{
+  "type":"minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:smooth_stone"
+  },
+  "result":"minecraft:dimension",
+  "experience":"0.5",
+  "cookingtime": 500
+}
