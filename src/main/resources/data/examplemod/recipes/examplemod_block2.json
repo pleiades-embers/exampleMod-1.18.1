@@ -1,12 +1,12 @@
 {
   "type":"minecraft:smelting",
   "ingredient": {
-    "item": "minecraft:diamond"
+    "item": "minecraft:smooth_stone"
   },
   "result":{
     "item": "minecraft:diamond",
     "count": 4
   },
-  "experience":"0.5",
+  "experience":0.5,
   "cookingtime": 500
 }
