@@ -27,12 +27,11 @@ public class CraftingRecipes extends RecipeProvider{
     @Override
     protected void  buildCraftingRecipes(Consumer<FinishedRecipe> consumer){
 
-        // ===================================================
-//        ShapedRecipeBuilder.shaped(Items.QUARTZ, 2)
-//                .pattern("a")
-//                .pattern("a")
-//                .pattern("a")
-//                .define('a', STONE)
-//                .save(consumer, makeId("materials/"));
+        ShapedRecipeBuilder.shaped(Items.QUARTZ, 2)
+                .pattern("a")
+                .pattern("a")
+                .pattern("a")
+                .define('a', STONE)
+                .save(consumer, makeId("item/diamond"));
     }
 }
