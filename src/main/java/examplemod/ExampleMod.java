@@ -26,7 +26,7 @@ public class ExampleMod
     private static final Logger logger = LoggerFactory.getLogger(ExampleMod.class);
     public ExampleMod()
     {
-  
+
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -45,7 +45,6 @@ public class ExampleMod
     {   
         // some preinit code
         logger.debug("HELLO FROM PREINIT");
-        logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -69,6 +68,7 @@ public class ExampleMod
         // Do something when the server starts
         logger.info("HELLO from server starting");
     }
+
 
     // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
     // Event bus for receiving Registry Events)
