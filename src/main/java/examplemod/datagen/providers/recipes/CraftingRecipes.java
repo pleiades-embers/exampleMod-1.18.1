@@ -15,7 +15,6 @@ public class CraftingRecipes extends RecipeProvider{
     public CraftingRecipes(DataGenerator generator){
         super(generator);
     }
-    public static Tag.Named<Item> STONE = Tags.Items.STONE;
     public static Tag.Named<Item> COBBLESTONE = Tags.Items.COBBLESTONE;
     public static Tag.Named<Item> GLASS = Tags.Items.GLASS;
 
@@ -31,7 +30,7 @@ public class CraftingRecipes extends RecipeProvider{
                 .pattern("a")
                 .pattern("a")
                 .pattern("a")
-                .define('a', STONE)
+                .define('a', Tags.Items.STONE)
                 .save(consumer, makeId("item/diamond"));
     }
 }
