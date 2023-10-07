@@ -1,0 +1,2 @@
+public class GenericsDemo2 {
+}
